@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Liste des clients</title>
+		<meta charset="utf-8">
+		<!-- <link rel="stylesheet" type="text/css" href="liste_client.css"> -->
+	</head>
+	<body>
+		<header><!-- Logo et titre/nom de l'entreprise -->
+			<img src="https://image.noelshack.com/fichiers/2020/44/2/1603788694-image.png" alt="logo_abi">
+            <h1>Active Bretagne Informatique</h1>
+            <nav>
+                <ul>
+                    <li class="comm">Gestion Commerciale</li>
+                    <li class="rh">Gestion RH</li>
+                    <li class="proj">Gestion des Projets</li>
+                </ul>
+            </nav>
+		</header>
+		<aside><!-- Ajout des boutons-->
+			Vous êtes connecté(e) en tant que "" 
+			<input type="button" value="Se déconnecter">
+			<br>
+			<br>
+		</aside>
+		<!-- <input type="text" id="myInput" placeholder="Rechercher par nom..." title="Ecrire un nom" disabled=""><!- Barre de recherche client par nom future interaction JS -->
+		<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher par nom..." title="Entrez un nom">
+		<table id="myTable">
+			<caption>Liste des clients :</caption><!-- Titre du tableau -->
+			<thead><!-- En-tête du tableau -->
+				<tr class="header">
+					<!-- <td>Identifiant</td>
+					<td>Nom</td>
+					<td>Prénom</td>
+					<td>Données clients</td> -->
+					<th style="width:40%;">Identifiant</th>
+					<th style="width:30%;">Nom Prénom</th>
+					<!-- <th style="width:20%;">Prénom</th> -->
+					<th style="width:20%;">Données clients</th>
+				</tr>
+			</thead>
+			<tbody><!-- Corps du tableau -->
+				<tr>
+					<td>DM8902</td>
+					<td>Diarra Mounina</td>
+					<!-- <td></td> -->
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>CM8801</td>
+					<td>Chevalier</td>
+					<td>Benoit</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>ND8705</td>
+					<td>Elmaadadi</td>
+					<td>Nada</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>BM8705</td>
+					<td>Bernard</td>
+					<td>Marie</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>VF0043</td>
+					<td>Vincent</td>
+					<td>Franck</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>MN2149</td>
+					<td>Mounaj</td>
+					<td>Nicky</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>PM8712</td>
+					<td>Pokori</td>
+					<td>Mathieu</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>ONJ8713</td>
+					<td>O'Neil</td>
+					<td>Jaques</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>NB8714</td>
+					<td>Benattia</td>
+					<td>Nabilé</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>MT8715</td>
+					<td>Tea</td>
+					<td>May</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>RN8716</td>
+					<td>Neige</td>
+					<td>Reine</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>AL8720</td>
+					<td>Leroy</td>
+					<td>Adèle</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>IC8811</td>
+					<td>Igounet</td>
+					<td>Calvin</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>RF8812</td>
+					<td>Fenty</td>
+					<td>Rihanno</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+				<tr>
+					<td>MS8813</td>
+					<td>Sampson</td>
+					<td>Marjorie</td>
+					<td>&nbsp; &#128270; &#128221; &#128190;</td>
+				</tr>
+			</tbody>
+		</table>
+		<footer><!-- Informations légales et lien vers mail webmaster du site -->
+			<br>
+            <p>© ABI 2020. Tous droits réservés</p>
+            <a href="mailto:contact@abi.fr">contact@abi.fr</a>
+			<!-- Partie Footer optionnel pas demandée-->
+			<!-- <ul>
+				<li>Mentions légales</li>
+				<li>Conditions générales d'utilisation</li>
+				<li>Qui sommes nous</li>
+				<li>Plan du site</li>
+			</ul> -->
+		</footer>
+		<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+	</body>
+</html>
