@@ -1,0 +1,112 @@
+<!-- Nom du programme: création d'un nouveau projet
+Equipe: NBM - Nada, Benoit, Mounina
+Crée par: Benoit -->
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <!-- <link rel="stylesheet" type="text/css" href="./css/styles.css" /> -->
+        <title>ABI: Création d'un projet</title>
+    </head>
+    <body>
+        <header><!-- Logo et titre/nom de l'entreprise -->
+            <img src="https://image.noelshack.com/fichiers/2020/44/2/1603788694-image.png" alt="logo_abi">
+            <h1>Active Bretagne Informatique</h1>
+            <nav>
+                <ul>
+                    <li>Gestion Commerciale</li>
+                    <li>Gestion RH</li>
+                    <li>Gestion des Projets</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <aside><!-- Ajout des boutons-->
+                Vous êtes connecté(e) en tant que ""
+                <input type="button" value="Se déconnecter">
+                <br>
+                <br>
+            </aside>
+            <h2>Initialisation d'un projet</h2>
+            <form id="initialisationProjet">
+                <div><!-- Code du projet -->
+                    <label class="code">Code du projet:</label>
+                    <input type="text" name="code" id="code">
+                </div>
+                <br>
+                <div><!-- Nom du projet -->
+                    <label class="nom">Nom du projet:</label>
+                    <input type="text" name="nom" id="nom">
+                </div>
+                <br>
+                <div><!-- Type du projet -->
+                    <label class="typeProjet">Type du projet:</label>
+                    <select name="projet" id="projet">
+                        <option value="">-----</option>
+                        <option value="forfait">Forfait</option>
+                        <option value="assistance">Assistance</option>
+                        <option value="regie">Régie</option>
+                    </select>
+                </div>
+                <br>
+                <div><!-- Secteur d'activité du projet -->
+                    <label class="secteurActivite">Secteur d'activité:</label>
+                    <select name="secteurActivite" id="secteurActivite">
+                        <option value="">-----</option>
+                        <option value="agroalimentaire">Agroalimentaire</option>
+                        <option value="banque">Banque / Assurance</option>
+                        <option value="btp">BTP / Matériaux de construction</option>
+                        <option value="commerce">Commerce / Négoce / Distribution</option>
+                        <option value="electronique">Électronique / Électricité</option>
+                        <option value="informatique">Informatique / Télécoms</option>
+                        <option value="metallurgie">Métallurgie / Travail du métal</option>
+                        <option value="textile">Textile / Habillement / Chaussure</option>
+                        <option value="transports">Transports / Logistique</option>
+                    </select>
+                </div>
+                <br>
+                <div><!-- Charge globale du projet -->
+                    <label class="chargeGlobale">Charges globale estimées (heures):</label>
+                    <input type="number" id="chargeGlobale">
+                </div>
+                <br>
+                <div><!-- Commercial -->
+                    <label class="commercial">Commercial:</label>
+                    <select name="commercial" id="commercial">
+                        <option value="">-----</option>
+                        <option value="Mathieu">Mathieu</option>
+                        <option value="jack">Jack</option>
+                        <option value="nabile">Nabilé</option>
+                    </select>
+                </div>
+                <br>
+                <div><!-- Product Owner -->
+                    <label class="po"> Product owner:</label>
+                    <select name="po" id="po">
+                        <option value="">-----</option>
+                        <option value="marie">Marie</option>
+                        <option value="franck">Franck</option>
+                        <option value="nicky">Nicky</option>
+                    </select>
+                </div>
+                <br>
+                <div><!-- Scrum Master -->
+                    <label class="scrumMaster">Scrum master:</label>
+                    <select name="scrumMaster" id="scrumMaster">
+                        <option value="">-----</option>
+                        <option value="nada">Nada</option>
+                        <option value="benoit">Benoit</option>
+                        <option value="mounina">Mounina</option>
+                    </select>
+                </div>
+                <br>
+                <button type="reset">Annuler</button> <button type="submit">Valider</button>
+            </form>
+        </main>
+        <footer><!-- Pied de page -->
+            <p class="footer">&copy; ABI 2020. Tous droits réservés</p>
+            <a href="mailto:contact@abi.fr">contact@abi.fr</a>
+        </footer>
+        <!-- <script src="./js/main.js"></script> -->
+    </body>
+</html>
