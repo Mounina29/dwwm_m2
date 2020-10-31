@@ -5,52 +5,51 @@ Crée par: Benoit -->
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <!-- <link rel="stylesheet" type="text/css" href="./css/styles.css" /> -->
+        <link rel="stylesheet" type="text/css" href="./css/main.css" />
         <title>ABI: Création d'un projet</title>
     </head>
     <body>
         <header><!-- Logo et titre/nom de l'entreprise -->
-            <img src="https://image.noelshack.com/fichiers/2020/44/2/1603788694-image.png" alt="logo_abi">
-            <h1>Active Bretagne Informatique</h1>
+            <img src="https://image.noelshack.com/fichiers/2020/44/2/1603788694-image.png" alt="logo_abi" class="logo">
+            <h1 class="titre">ACTIVE BRETAGNE INFORMATIQUE</h1>
             <nav>
                 <ul>
-                    <li>Gestion Commerciale</li>
-                    <li>Gestion RH</li>
-                    <li>Gestion des Projets</li>
+                    <li>GESTION COMMERCIAL</li>
+                    <li>GESTION RH</li>
+                    <li>GESTION DES PROJETS</li>
                 </ul>
             </nav>
         </header>
         <main>
             <aside><!-- Ajout des boutons-->
-                Vous êtes connecté(e) en tant que ""
-                <input type="button" value="Se déconnecter">
-                <br>
-                <br>
+                <button type="submit">MON COMPTE</button>
+                <br><br>
+                <button type="submit">DECONNEXION</button>
             </aside>
-            <h2>Initialisation d'un projet</h2>
+            <h2 class="initProjet">CREATION D'UN NOUVEAU PROJET</h2>
             <form id="initialisationProjet">
                 <div><!-- Code du projet -->
-                    <label class="code">Code du projet:</label>
+                    <label class="code">CODE PROJET:</label>
                     <input type="text" name="code" id="code">
                 </div>
                 <br>
                 <div><!-- Nom du projet -->
-                    <label class="nom">Nom du projet:</label>
+                    <label class="nom">NOM PROJET:</label>
                     <input type="text" name="nom" id="nom">
                 </div>
                 <br>
                 <div><!-- Type du projet -->
-                    <label class="typeProjet">Type du projet:</label>
+                    <label class="typeProjet">TYPE PROJET:</label>
                     <select name="projet" id="projet">
                         <option value="">-----</option>
-                        <option value="forfait">Forfait</option>
-                        <option value="assistance">Assistance</option>
-                        <option value="regie">Régie</option>
+                        <option value="forfait">FORFAIT</option>
+                        <option value="assistance">ASSISTANCE</option>
+                        <option value="regie">REGIE</option>
                     </select>
                 </div>
                 <br>
                 <div><!-- Secteur d'activité du projet -->
-                    <label class="secteurActivite">Secteur d'activité:</label>
+                    <label class="secteurActivite">SECTEUR D'ACTIVITE:</label>
                     <select name="secteurActivite" id="secteurActivite">
                         <option value="">-----</option>
                         <option value="agroalimentaire">Agroalimentaire</option>
@@ -66,45 +65,45 @@ Crée par: Benoit -->
                 </div>
                 <br>
                 <div><!-- Charge globale du projet -->
-                    <label class="chargeGlobale">Charges globale estimées (heures):</label>
+                    <label class="chargeGlobale">CHARGES GLOBALES ESTIMEES (HEURES):</label>
                     <input type="number" id="chargeGlobale">
                 </div>
                 <br>
                 <div><!-- Commercial -->
-                    <label class="commercial">Commercial:</label>
+                    <label class="commercial">COMMERCIAL:</label>
                     <select name="commercial" id="commercial">
                         <option value="">-----</option>
-                        <option value="Mathieu">Mathieu</option>
-                        <option value="jack">Jack</option>
-                        <option value="nabile">Nabilé</option>
+                        <option value="Mathieu">MATHIEU</option>
+                        <option value="jack">JACK</option>
+                        <option value="nabile">NABILE</option>
                     </select>
                 </div>
                 <br>
                 <div><!-- Product Owner -->
-                    <label class="po"> Product owner:</label>
+                    <label class="po">PRODUCT OWNER:</label>
                     <select name="po" id="po">
                         <option value="">-----</option>
-                        <option value="marie">Marie</option>
-                        <option value="franck">Franck</option>
-                        <option value="nicky">Nicky</option>
+                        <option value="marie">MARIE</option>
+                        <option value="franck">FRANCK</option>
+                        <option value="nicky">NICKY</option>
                     </select>
                 </div>
                 <br>
                 <div><!-- Scrum Master -->
-                    <label class="scrumMaster">Scrum master:</label>
+                    <label class="scrumMaster">SCRUM MASTER:</label>
                     <select name="scrumMaster" id="scrumMaster">
                         <option value="">-----</option>
-                        <option value="nada">Nada</option>
-                        <option value="benoit">Benoit</option>
-                        <option value="mounina">Mounina</option>
+                        <option value="nada">NADA</option>
+                        <option value="benoit">BENOIT</option>
+                        <option value="mounina">MOUNINA</option>
                     </select>
                 </div>
                 <br>
-                <button type="reset">Annuler</button> <button type="submit">Valider</button>
+                <button type="reset">ANNULER</button> <button type="submit">VALIDER</button>
             </form>
         </main>
         <footer><!-- Pied de page -->
-            <p class="footer">&copy; ABI 2020. Tous droits réservés</p>
+            <p class="footer">&copy; ABI 2020. TOUS DROITS RESERVES</p>
             <a href="mailto:contact@abi.fr">contact@abi.fr</a>
         </footer>
         <!-- <script src="./js/main.js"></script> -->
