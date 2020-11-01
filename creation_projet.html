@@ -23,24 +23,24 @@ Crée par: Benoit -->
         <main>
             <aside><!-- Ajout des boutons-->
                 <button type="submit">MON COMPTE</button>
-                <br><br>
+                <br>
                 <button type="submit">DECONNEXION</button>
             </aside>
             <h2 class="initProjet">CREATION D'UN NOUVEAU PROJET</h2>
             <form id="initialisationProjet">
                 <div><!-- Code du projet -->
                     <label class="code">CODE PROJET:</label>
-                    <input type="text" name="code" id="code">
+                    <input type="text" name="code" id="code" minlength="2" required>
                 </div>
                 <br>
                 <div><!-- Nom du projet -->
                     <label class="nom">NOM PROJET:</label>
-                    <input type="text" name="nom" id="nom">
+                    <input type="text" name="nom" id="nom" minlength="2" required>
                 </div>
                 <br>
                 <div><!-- Type du projet -->
                     <label class="typeProjet">TYPE PROJET:</label>
-                    <select name="projet" id="projet">
+                    <select name="projet" id="projet" required>
                         <option value="">-----</option>
                         <option value="forfait">FORFAIT</option>
                         <option value="assistance">ASSISTANCE</option>
@@ -50,7 +50,7 @@ Crée par: Benoit -->
                 <br>
                 <div><!-- Secteur d'activité du projet -->
                     <label class="secteurActivite">SECTEUR D'ACTIVITE:</label>
-                    <select name="secteurActivite" id="secteurActivite">
+                    <select name="secteurActivite" id="secteurActivite" required>
                         <option value="">-----</option>
                         <option value="agroalimentaire">Agroalimentaire</option>
                         <option value="banque">Banque / Assurance</option>
@@ -65,13 +65,13 @@ Crée par: Benoit -->
                 </div>
                 <br>
                 <div><!-- Charge globale du projet -->
-                    <label class="chargeGlobale">CHARGES GLOBALES ESTIMEES (HEURES):</label>
-                    <input type="number" id="chargeGlobale">
+                    <label class="chargeGlobale">CHARGES GLOBALES ESTIMEES:</label>
+                    <input type="number" id="chargeGlobale" required>
                 </div>
                 <br>
                 <div><!-- Commercial -->
                     <label class="commercial">COMMERCIAL:</label>
-                    <select name="commercial" id="commercial">
+                    <select name="commercial" id="commercial" required>
                         <option value="">-----</option>
                         <option value="Mathieu">MATHIEU</option>
                         <option value="jack">JACK</option>
@@ -81,7 +81,7 @@ Crée par: Benoit -->
                 <br>
                 <div><!-- Product Owner -->
                     <label class="po">PRODUCT OWNER:</label>
-                    <select name="po" id="po">
+                    <select name="po" id="po" required>
                         <option value="">-----</option>
                         <option value="marie">MARIE</option>
                         <option value="franck">FRANCK</option>
@@ -91,7 +91,7 @@ Crée par: Benoit -->
                 <br>
                 <div><!-- Scrum Master -->
                     <label class="scrumMaster">SCRUM MASTER:</label>
-                    <select name="scrumMaster" id="scrumMaster">
+                    <select name="scrumMaster" id="scrumMaster" required>
                         <option value="">-----</option>
                         <option value="nada">NADA</option>
                         <option value="benoit">BENOIT</option>
