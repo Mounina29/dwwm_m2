@@ -10,20 +10,20 @@ Crée par: Nada -->
 		<link rel="stylesheet" type="text/css" href="css/main.css">
       <!-- Utilisation des icones licence libre de droit, site pratique "Fontawesome" -->
       <!-- CSS link Fontawesome -->
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"> 
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 	</head>
 	<body>
-		<header><!-- Logo et titre/nom de l'entreprise -->
-      <img src="https://image.noelshack.com/fichiers/2020/44/2/1603788694-image.png" alt="logo_abi" id="logo">
-      <h1>ACTIVE BRETAGNE INFORMATIQUE</h1>
+    <header><!-- Logo et titre/nom de l'entreprise -->
+      <img src="https://image.noelshack.com/fichiers/2020/44/2/1603788694-image.png" alt="logo_abi" class="logo">
+      <h1 class="titre">ACTIVE BRETAGNE INFORMATIQUE</h1>
       <nav>
           <ul>
-              <li class="comm">GESTION COMMERCIALE</li>
-              <li class="rh">GESTION RH</li>
-              <li class="proj">GESTION DES PROJETS</li>
+              <li>GESTION COMMERCIAL</li>
+              <li>GESTION RH</li>
+              <li>GESTION DES PROJETS</li>
           </ul>
-      </nav>     
-		</header>
+      </nav>
+  </header>
     <br>
     <!-- Petite checkbox utilisé pour dérouler le menu sidebar -->
     <input type="checkbox" id="check" checked="">
@@ -36,19 +36,19 @@ Crée par: Nada -->
     <a href="#"><i class="fas fa-user"></i><span class="side_text">Mon compte</span></a>
     <a href="#"><i class="fas fa-sign-out-alt"></i><span class="side_text">Se déconnecter</span></a>
     <a href="#"><i class="fas fa-map-marker-alt"></i><span class="side_text">Ou suis-je ?</span></a>
-    <a href="#"><i class="fas fa-file-alt"></i><span class="side_text">Nouveau projet</span></a> 
+    <a href="#"><i class="fas fa-file-alt"></i><span class="side_text">Nouveau projet</span></a>
   </div>
   <span class="user">
     <span class="icon_color"><i class="fas fa-user-check" title="Statut connecté(e)"></i>
     </span>
     <span class="user_co">Bienvenue ! Vous êtes connecté(e) en tant que "<span class="diff_color">Administrateur</span>"
-    </span> 
+    </span>
   </span>
     <!-------- Fin partie SIDEBAR --------->
     <div class="table_div">
       <table id="monTableau"><!-- Mon tableau liste de client ABI -->
-      <caption>Liste des clients 
-          <!-- Barre de recherche client par nom future interaction JS, pour l'instant disabled --> 
+      <caption>Liste des clients
+          <!-- Barre de recherche client par nom future interaction JS, pour l'instant disabled -->
           <input class="b_recherche" type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher par nom..." title="Entrez un nom" disabled="">
       </caption><!-- Titre du tableau -->
       <thead><!-- En-tête du tableau -->
@@ -250,8 +250,8 @@ Crée par: Nada -->
               } else {
               tr[i].style.display = "none";
                 }
-               }       
-              }     
+               }
+              }
             }
     </script> -->
 	</body>

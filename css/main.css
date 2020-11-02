@@ -1,79 +1,125 @@
 /* Feuille de style language CSS à ajouté au HTML de l'opération 2, mission 2*/
 /* Equipe NBM : Mounina, Benoit et Nada*/
-/*Crée par: Nada*/
-/* Feuille de style page "Liste des clients"*/
 
+* {
+  margin: 0px;
+  padding: 0px;
+}
 
-/* Habillage du corps de la page */
-/* Utilisation des polices Palatino Linotype sur l'ensemble de la page*/
+html {
+  background-color: #61a6ab;
+}
+
 body {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  margin: 20;
-  background-color: #eddbc2; 
+  background-color: #eddbc2;
 }
 
-/* Habillage du header Active bretagne informatique, logo, nom de l'entreprise */
+header {
+  background-color: #5271ff;
+  display: block;
+  border-bottom: 10px white solid;
+}
+
+footer {
+  background-color: #5271ff;
+  text-align: center;
+  padding: 25px;
+  color: #363636;
+  font-family: "Open Sans", sans-serif;
+  border-top: 10px white solid;
+}
+
+p.footer {
+  padding: 5px;
+}
+
+img.logo {
+  float: left;
+}
+
 h1 {
-  border-top: 50px solid;
-  border-top-color: #61a6ab;
+  padding-bottom: 20px;
+  padding-top: 35px;
+}
+
+h1.titre {
   text-align: center;
-  line-height: 170px;
-  margin: 0; 
-  margin-left: 150px;
-  background: #5271ff; 
-  position: relative;
-  color: #3b3b3b;
-  text-shadow: 0.1em 0.1em 0.7em lightgrey;
-  block-size: 132px; 
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  font-size: 60px;
-  overflow: hidden;
+  color: #363636;
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+  margin-top: 15px;
 }
 
-#logo{
-  border-top: 50px solid;
-  border-top-color: #61a6ab;
-  position: absolute;
-  left: 8px;  
-  top: 20;
+h2 {
+  color: #363636;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 25px;
+  padding-left: 150px;
 }
 
-/* Habillage de la barre navigation */
+nav {
+  float: left;
+}
+
 ul {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #eddbc2; 
-  margin-left: 0px;
+
+  padding-top: 15px;
+  padding-left: 250px;
+}
+
+li {
+  display: inline;
+  color: #363636;
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  padding: 78px;
+
+}
+
+main {
+  padding: 30px;
   text-align: center;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif; 
-  font-variant: small-caps;  
-  font-weight: bold;
-  border-bottom-style: solid;
-  border-bottom-color: rgba(43, 64, 148, 0.10);
-  border-bottom-width: 1px;
- } 
-
-li.comm {
-  display: inline;
-  float: inline-end;
-  color: #545454;
-  padding: 14px 130px;
 }
 
-li.rh {
-  display: inline;
-  color: #545454;
-  padding: 14px 230px;
+form {
+  padding-top: 25px;
+  width: 600px;
+  padding-left: 625px;
+  padding-bottom: 25px;
 }
 
-li.proj {
-  display: inline;
-  color: #545454;
+label {
+  float: left;
+  color: #363636;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  position: absolute;
+}
+
+input,select {
+  border: none;
+  width: 45%;
+  margin-left: 335px;
+  padding: 5px;
+}
+
+button {
+  background-color: #5271ff;
+  color: #363636;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
   margin-left: 200px;
 }
 
-/* Habillage du tableau, visibilité des lignes pour un meilleur confort utilisateur */
+button:hover {
+  background-color: #DC3545;
+}
+
+/* Habillage du tableau, visibilité des lignes pour un meilleur confort utilisateur
 /* Ajout d'une barre de recherche pour le moment disabled, mais qui intègrera une fonctionnalité Javascript de recherche ciblé par nom*/
 .tableFilter {
   float: right;
@@ -91,7 +137,7 @@ li.proj {
   padding-top: 10px;
   font-size: 17px;
   min-width: 480px;
-  border-radius: 8px 8px 0 0; 
+  border-radius: 8px 8px 0 0;
   overflow: hidden;
   width: 59%;
   border-bottom-style: solid;
@@ -113,12 +159,12 @@ li.proj {
 }
 
 #monTableau tbody tr td {
-  border-bottom: 1px solid #a3a3a3; 
- 
+  border-bottom: 1px solid #a3a3a3;
+
 }
 
 #monTableau tbody tr:nth-of-type(even) {
-  background-color: rgba(141, 190, 176, 0.4); 
+  background-color: rgba(141, 190, 176, 0.4);
 }
 
 table {
@@ -159,7 +205,7 @@ caption {
   font-size: 14px;
   background-color: white;
   background-image: url("https://img.icons8.com/color/22/000000/search.png");
-  background-position: 8px 4px; 
+  background-position: 8px 4px;
   background-repeat: no-repeat;
   padding: 6px 20px 6px 50px;
   margin-top: 6px;
@@ -180,6 +226,7 @@ caption {
 
 .user {
   display: inline-block;
+  padding: 15px;
 }
 
 .user_co {
@@ -199,7 +246,7 @@ caption {
   background: #8dbeb0;
   margin-top: 30px;
   padding-top: 10px;
-  border-radius: 9px; 
+  border-radius: 9px;
   position: fixed;
   right: 0;
   width: 165px;
@@ -272,18 +319,4 @@ label #mon_sidebar_btn:hover {
 /* Cacher la checkbox qui nous sert à ouvrir le menu*/
 #check {
   display: none;
-}
-
-/* Habillage du footer*/
-footer {
-    background-color: #5271ff;
-    text-align: center;
-    padding: 25px;
-    color: #363636;
-    font-family: "Open Sans", sans-serif;
-    border-top: 10px white solid;
-}
-
-p.footer {
-    padding: 5px;
 }
