@@ -1,0 +1,258 @@
+<!-- Nom du programme: création d'un nouveau projet
+Crée par: Nada -->
+<!-- Equipe NBM : Mounina, Benoit et Nada  -->
+<!-- Document HTML lié à sa feuille de style CSS "Liste des clients"-->
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Liste des clients</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+      <!-- Utilisation des icones licence libre de droit, site pratique "Fontawesome" -->
+      <!-- CSS link Fontawesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+	</head>
+	<body>
+    <header><!-- Logo et titre/nom de l'entreprise -->
+      <img src="https://image.noelshack.com/fichiers/2020/44/2/1603788694-image.png" alt="logo_abi" class="logo">
+      <h1 class="titre">ACTIVE BRETAGNE INFORMATIQUE</h1>
+      <nav>
+          <ul>
+              <li>GESTION COMMERCIAL</li>
+              <li>GESTION RH</li>
+              <li>GESTION DES PROJETS</li>
+          </ul>
+      </nav>
+  </header>
+    <br>
+    <!-- Petite checkbox utilisé pour dérouler le menu sidebar -->
+    <input type="checkbox" id="check" checked="">
+    <label for="check">
+      <span class="menu">MENU</span><i class="fas fa-bars" id="mon_sidebar_btn"></i>
+    </label>
+    <!--------- Ma SIDEBAR + message de bienvenue nom de la personne connectée ----------->
+  <div class="sidebar">
+    <a href="#"><i class="fas fa-home"></i><span class="side_text">Accueil</span></a>
+    <a href="#"><i class="fas fa-user"></i><span class="side_text">Mon compte</span></a>
+    <a href="#"><i class="fas fa-sign-out-alt"></i><span class="side_text">Se déconnecter</span></a>
+    <a href="#"><i class="fas fa-map-marker-alt"></i><span class="side_text">Ou suis-je ?</span></a>
+    <a href="#"><i class="fas fa-file-alt"></i><span class="side_text">Nouveau projet</span></a>
+  </div>
+  <span class="user">
+    <span class="icon_color"><i class="fas fa-user-check" title="Statut connecté(e)"></i>
+    </span>
+    <span class="user_co">Bienvenue ! Vous êtes connecté(e) en tant que "<span class="diff_color">Administrateur</span>"
+    </span>
+  </span>
+    <!-------- Fin partie SIDEBAR --------->
+    <div class="table_div">
+      <table id="monTableau"><!-- Mon tableau liste de client ABI -->
+      <caption>Liste des clients
+          <!-- Barre de recherche client par nom future interaction JS, pour l'instant disabled -->
+          <input class="b_recherche" type="text" id="myInput" onkeyup="myFunction()" placeholder="Rechercher par nom..." title="Entrez un nom" disabled="">
+      </caption><!-- Titre du tableau -->
+      <thead><!-- En-tête du tableau -->
+        <tr class="header">
+          <th class="th1" style="width:15%;">Identifiant</th>
+          <th class="th1" style="width:20%;">Nom &nbsp; et &nbsp; Prénom</th>
+          <th class="th1" style="width:15%;">Données clients</th>
+          <th class="th2" style="width:1%;"><i class="fas fa-user-plus" title="Créer nouveau client"></i></th>
+        </tr>
+      </thead>
+      <tbody class="defilement"><!-- Corps du tableau -->
+        <tr>
+          <td>DM8902</td>
+          <td>Diarra Mounina </td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>CM8801</td>
+          <td>Chevalier Benoit</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ND8705</td>
+          <td>Elmaadadi Nada</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>BM8705</td>
+          <td>Bernard Marie</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>VF0043</td>
+          <td>Vincent Franck</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>MN2149</td>
+          <td>Mounaj Nicky</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PM8712</td>
+          <td>Pokori Mathieu</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ONJ8713</td>
+          <td>O'Neil Jaques</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>NB8714</td>
+          <td>Benattia Nabilé</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>MT8715</td>
+          <td>Tea May</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RN8716</td>
+          <td>Neige Reine</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>AL8720</td>
+          <td>Leroy Adèle</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>IC8811</td>
+          <td>Igounet Calvin</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>RF8812</td>
+          <td>Fenty Rihanno</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>MS8813</td>
+          <td>Sampson Marjorie</td>
+          <td>
+            <span class="curseur" title="Voir fiche client">&#128270;</span>
+            &nbsp;<span class="curseur" title="Modifier">&#128221;</span>
+            &nbsp;<span class="curseur" title="Enregistrer">&#128190;</span>
+            &nbsp;<span class="curseur" title="Supprimer client">&#10060;</span>
+          </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+    <br>
+		<footer><!-- Pied de page : Informations légales et lien vers mail webmaster du site -->
+      <p class="footer">&copy; ABI 2020. TOUS DROITS RESERVES</p>
+      <a href="mailto:contact@abi.fr">contact@abi.fr</a>
+		</footer>
+    <!-- Fonction JS de recherche ciblé dans tableau grace à son indexation -->
+    <!-- <script>function myFunction() {
+              var input, filter, table, tr, td, i, txtValue;
+              input = document.getElementById("myInput");
+              filter = input.value.toUpperCase();
+              table = document.getElementById("monTableau");
+              tr = table.getElementsByTagName("tr");
+
+              for (i = 0; i < tr.length; i++) {
+              td = (tr[i].getElementsByTagName("td")[1]);
+              if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+              } else {
+              tr[i].style.display = "none";
+                }
+               }
+              }
+            }
+    </script> -->
+	</body>
+</html>

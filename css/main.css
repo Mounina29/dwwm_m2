@@ -1,120 +1,322 @@
+/* Feuille de style language CSS à ajouté au HTML de l'opération 2, mission 2*/
+/* Equipe NBM : Mounina, Benoit et Nada*/
+
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 html {
-    background-color: #61a6ab;
+  background-color: #61a6ab;
 }
 
 body {
-    background-color: #eddbc2;
+  background-color: #eddbc2;
 }
 
 header {
-    background-color: #5271ff;
-    display: block;
-    border-bottom: 10px white solid;
+  background-color: #5271ff;
+  display: block;
+  border-bottom: 10px white solid;
 }
 
 footer {
-    background-color: #5271ff;
-    text-align: center;
-    padding: 25px;
-    color: #363636;
-    font-family: "Open Sans", sans-serif;
-    border-top: 10px white solid;
+  background-color: #5271ff;
+  text-align: center;
+  padding: 25px;
+  color: #363636;
+  font-family: "Open Sans", sans-serif;
+  border-top: 10px white solid;
 }
 
 p.footer {
-    padding: 5px;
+  padding: 5px;
 }
 
 img.logo {
-    float: left;
+  float: left;
 }
 
 h1 {
-    padding-bottom: 20px;
-    padding-top: 35px;
+  padding-bottom: 20px;
+  padding-top: 35px;
 }
 
 h1.titre {
-    text-align: center;
-    color: #363636;
-    font-family: "Open Sans", sans-serif;
-    font-size: 50px;
-    margin-top: 15px;
+  text-align: center;
+  color: #363636;
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px;
+  margin-top: 15px;
 }
 
 h2 {
-    color: #363636;
-    font-family: "Open Sans", sans-serif;
-    text-align: center;
-    font-size: 40px;
-    padding-top: 25px;
-    padding-left: 150px;
+  color: #363636;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  padding-top: 25px;
+  padding-left: 150px;
 }
 
 nav {
-    float: left;
+  float: left;
 }
 
 ul {
 
-    padding-top: 15px;
-    padding-left: 250px;
+  padding-top: 15px;
+  padding-left: 250px;
 }
 
 li {
-    display: inline;
-    color: #363636;
-    font-family: "Open Sans", sans-serif;
-    font-size: 25px;
-    padding: 78px;
+  display: inline;
+  color: #363636;
+  font-family: "Open Sans", sans-serif;
+  font-size: 25px;
+  padding: 78px;
 
 }
 
 main {
-    padding: 30px;
-    text-align: center;
+  padding: 30px;
+  text-align: center;
 }
 
 form {
-    padding-top: 50px;
-    width: 600px;
-    padding-left: 625px;
+  padding-top: 25px;
+  width: 600px;
+  padding-left: 625px;
+  padding-bottom: 25px;
 }
 
 label {
-    float: left;
-    color: #363636;
-    font-family: "Open Sans", sans-serif;
-    font-size: 20px;
-    position: absolute;
-}
-
-aside {
-    float: right;
-    margin-right: 10px;
+  float: left;
+  color: #363636;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  position: absolute;
 }
 
 input,select {
-    border: none;
-    width: 45%;
-    margin-left: 335px;
-    padding: 5px;
+  border: none;
+  width: 45%;
+  margin-left: 335px;
+  padding: 5px;
 }
 
 button {
-    background-color: #5271ff;
-    color: #363636;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-    border: none;
+  background-color: #5271ff;
+  color: #363636;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  margin-left: 200px;
 }
 
 button:hover {
-    background-color: #DC3545;
+  background-color: #DC3545;
+}
+
+/* Habillage du tableau, visibilité des lignes pour un meilleur confort utilisateur
+/* Ajout d'une barre de recherche pour le moment disabled, mais qui intègrera une fonctionnalité Javascript de recherche ciblé par nom*/
+.tableFilter {
+  float: right;
+}
+
+.table_div {
+  width: 80%;
+  padding-left: 250px;
+}
+
+#monTableau {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  padding-top: 10px;
+  font-size: 17px;
+  min-width: 480px;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  width: 59%;
+  border-bottom-style: solid;
+  border-bottom-color: #5372f7;
+  border-bottom-width: 3px;
+}
+
+#monTableau thead tr {
+  background-color: rgba(83, 114, 247, 0.7);
+  text-align: left;
+  color: #343434;
+  font-weight: bold;
+}
+
+#monTableau th,
+#monTableau td {
+  padding: 10px 20px;
+  padding-right: 10px;
+}
+
+#monTableau tbody tr td {
+  border-bottom: 1px solid #a3a3a3;
+
+}
+
+#monTableau tbody tr:nth-of-type(even) {
+  background-color: rgba(141, 190, 176, 0.4);
+}
+
+table {
+  margin-top: 160px;
+  border-spacing: 0;
+}
+
+.th2:hover {
+  color: #bef7e7;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.curseur {
+  cursor: pointer;
+}
+
+caption {
+  background-color: #8dbeb0 ;
+  padding: 12px 15px;
+  color: #444647;
+  text-shadow: 0.2em 0.2em 0.5em #c2f6ff;
+  text-align: center;
+  overflow: hidden;
+  font-size: 30px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: bold;
+}
+
+/* Habillage de la barre de recherche, du tableau liste de client */
+/*Utilisation d'icone site "fontawesome", licence libre de droit, pour n'importe quelle utilisation incluant commerciale*/
+.b_recherche {
+  float: right;
+  width: 28%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  background-image: url("https://img.icons8.com/color/22/000000/search.png");
+  background-position: 8px 4px;
+  background-repeat: no-repeat;
+  padding: 6px 20px 6px 50px;
+  margin-top: 6px;
+}
+
+/* Habillage Sidebar, avec hover disabled : Accueil, mon compte, se déconnecter, localisation*/
+/* Utilisation d'une checkbox HTML simple et habillage CSS pour ouvrir le menu en cliquant dessus*/
+.side_text {
+  font-weight: bold;
+  font-family: arial;
+}
+
+.icon_color {
+  color: #41a13b;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.user {
+  display: inline-block;
+  padding: 15px;
+}
+
+.user_co {
+  color: #444647;
+  font-size: 15px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: bold;
+}
+
+.diff_color {
+  color: #5271ff;
+  font-weight: 900;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.sidebar {
+  background: #8dbeb0;
+  margin-top: 30px;
+  padding-top: 10px;
+  border-radius: 9px;
+  position: fixed;
+  right: 0;
+  width: 165px;
+  height: 56%;
+  transition: 0.5s;
+  transition-property: right;
+}
+
+.sidebar a {
+  color: #444647;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 13px;
+  box-sizing: border-box;
+  transition: 0.4s;
+  transition-property: background;
+}
+
+.sidebar a:hover {
+  background: #bef7e7;
+}
+
+.sidebar i {
+  padding-right: 12px;
+}
+
+/* Sidebar effect à partir d'ici */
+label #mon_sidebar_btn {
+  z-index: 1;
+  position: fixed;
+  color: #444647;
+  cursor: pointer;
+  right: 3px;
+  font-size: 23px;
+  margin: 3px 0;
+  transition: 0.05s;
+  transition-property: color;
+}
+
+label .menu {
+
+  position: fixed;
+  color: #444647;
+  right: 3px;
+  font-size: smaller;
+  padding-right: 25px;
+  margin: 5px 0;
+}
+
+label #mon_sidebar_btn:hover {
+  color: #bef7e7;
+}
+
+#check:checked ~.sidebar {
+  right: -115px;
+}
+
+#check:checked ~.sidebar a span {
+  display: none;
+}
+
+#check:checked ~.sidebar a {
+  font-size: 23px;
+  margin-right: 170px;
+  width: 80px;
+}
+
+/* Cacher la checkbox qui nous sert à ouvrir le menu*/
+#check {
+  display: none;
 }

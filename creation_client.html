@@ -5,7 +5,8 @@ Crée par: Mounina -->
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="./css/main.css" />
+		<link rel="stylesheet" type="text/css" href="./css/main.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <title>ABI: Création d'un projet</title>
     </head>
     <body>
@@ -20,12 +21,26 @@ Crée par: Mounina -->
                 </ul>
             </nav>
         </header>
-        <main>
-        <aside><!-- Ajout des boutons-->
-            <button type="submit">MON COMPTE</button>
-            <br>
-            <button type="submit">DECONNEXION</button>
-        </aside><!--formulaire-->
+        <br>
+        <!-- Petite checkbox utilisé pour dérouler le menu sidebar -->
+        <input type="checkbox" id="check" checked="">
+        <label for="check">
+            <span class="menu">MENU</span><i class="fas fa-bars" id="mon_sidebar_btn"></i>
+        </label>
+        <!--------- Ma SIDEBAR + message de bienvenue nom de la personne connectée ----------->
+        <div class="sidebar">
+            <a href="#"><i class="fas fa-home"></i><span class="side_text">Accueil</span></a>
+            <a href="#"><i class="fas fa-user"></i><span class="side_text">Mon compte</span></a>
+            <a href="#"><i class="fas fa-sign-out-alt"></i><span class="side_text">Se déconnecter</span></a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i><span class="side_text">Ou suis-je ?</span></a>
+            <a href="#"><i class="fas fa-file-alt"></i><span class="side_text">Nouveau projet</span></a>
+        </div>
+        <span class="user">
+            <span class="icon_color"><i class="fas fa-user-check" title="Statut connecté(e)"></i>
+            </span>
+            <span class="user_co">Bienvenue ! Vous êtes connecté(e) en tant que "<span class="diff_color">Administrateur</span>"
+            </span>
+        </span>
         <div class="titredeux">
             <h2 class="formulaire">CREATION D'UN NOUVEAU CLIENT</h2>
         </div>
@@ -78,7 +93,6 @@ Crée par: Mounina -->
     			</div><br>
                 <button type="reset">ANNULER</button> <button type="submit">VALIDER</button>
 			</form>
-        </main>
         <footer><!-- Pied de page -->
             <p class="footer">&copy; ABI 2020. TOUS DROITS RESERVES</p>
             <a href="mailto:contact@abi.fr">contact@abi.fr</a>
