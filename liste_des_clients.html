@@ -1,7 +1,6 @@
-<!-- Nom du programme: création d'un nouveau projet
+<!-- Nom du programme: liste des clients
+Equipe: NBM - Nada, Benoit, Mounina
 Crée par: Nada -->
-<!-- Equipe NBM : Mounina, Benoit et Nada  -->
-<!-- Document HTML lié à sa feuille de style CSS "Liste des clients"-->
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -36,7 +35,9 @@ Crée par: Nada -->
     <a href="#"><i class="fas fa-user"></i><span class="side_text">Mon compte</span></a>
     <a href="#"><i class="fas fa-sign-out-alt"></i><span class="side_text">Se déconnecter</span></a>
     <a href="#"><i class="fas fa-map-marker-alt"></i><span class="side_text">Ou suis-je ?</span></a>
-    <a href="#"><i class="fas fa-file-alt"></i><span class="side_text">Nouveau projet</span></a>
+    <a href="./creation_projet.html"><i class="fas fa-file-alt"></i><span class="side_text">Nouveau projet</span></a>
+    <a href="./creation_client.html"><i class="fas fa-user-plus"></i><span class="side_text">Nouveau client</span></a>
+    <a href="./liste_des_clients.html"><i class="fas fa-clipboard-list"></i><span class="side_text">Liste des clients</span></a>
   </div>
   <span class="user">
     <span class="icon_color"><i class="fas fa-user-check" title="Statut connecté(e)"></i>
@@ -233,26 +234,5 @@ Crée par: Nada -->
       <p class="footer">&copy; ABI 2020. TOUS DROITS RESERVES</p>
       <a href="mailto:contact@abi.fr">contact@abi.fr</a>
 		</footer>
-    <!-- Fonction JS de recherche ciblé dans tableau grace à son indexation -->
-    <!-- <script>function myFunction() {
-              var input, filter, table, tr, td, i, txtValue;
-              input = document.getElementById("myInput");
-              filter = input.value.toUpperCase();
-              table = document.getElementById("monTableau");
-              tr = table.getElementsByTagName("tr");
-
-              for (i = 0; i < tr.length; i++) {
-              td = (tr[i].getElementsByTagName("td")[1]);
-              if (td) {
-              txtValue = td.textContent || td.innerText;
-              if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              tr[i].style.display = "";
-              } else {
-              tr[i].style.display = "none";
-                }
-               }
-              }
-            }
-    </script> -->
 	</body>
 </html>

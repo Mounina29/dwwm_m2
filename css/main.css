@@ -1,5 +1,5 @@
-/* Feuille de style language CSS à ajouté au HTML de l'opération 2, mission 2*/
-/* Equipe NBM : Mounina, Benoit et Nada*/
+/* Feuille de style language CSS
+Equipe NBM : Mounina, Benoit et Nada */
 
 * {
   margin: 0px;
@@ -117,6 +117,12 @@ button {
 
 button:hover {
   background-color: #DC3545;
+}
+
+#missCode, #missNom, #missTypeProjet,
+#missSecteurActivite, #missChargeGlobale, #missCommercial,
+#missPo, #missScrumMaster {
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Habillage du tableau, visibilité des lignes pour un meilleur confort utilisateur
