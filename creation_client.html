@@ -1,18 +1,15 @@
 <!-- Nom du programme: création d'un nouveau client
 Equipe: NBM - Nada, Benoit, Mounina
 Crée par: Mounina -->
-<!DOCTYPE HTML>
-    <html lang="fr">
-		<body>
-        <head>
-        <title>Ajout d'un nouveau client</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="assets/css/styles.css" />
-        </head>
-        <body>
-            <div class="barre">
-                <p><br></p>
-            </div>
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="./css/main.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <title>ABI: Création d'un projet</title>
+    </head>
+    <body>
         <header><!-- Logo et titre/nom de l'entreprise -->
             <div><img src="https://image.noelshack.com/fichiers/2020/44/2/1603788694-image.png" alt="logo_abi"></div>
             <!--titre-->
@@ -25,13 +22,29 @@ Crée par: Mounina -->
                     <li>Gestion des Projets|</li>
                 </ul>
             </nav>
-        </header><br>
-        <aside><!-- Ajout des boutons-->
-            Vous êtes connecté(e) en tant que "" 
-            <input type="button" value="Se déconnecter">
-            <br>
-            <br>
-        </aside><br><br>    <!--formulaire-->
+        </header>
+        <br>
+        <!-- Petite checkbox utilisé pour dérouler le menu sidebar -->
+        <input type="checkbox" id="check" checked="">
+        <label for="check">
+            <span class="menu">MENU</span><i class="fas fa-bars" id="mon_sidebar_btn"></i>
+        </label>
+        <!-- Ma SIDEBAR + message de bienvenue nom de la personne connectée -->
+        <div class="sidebar">
+            <a href="#"><i class="fas fa-home"></i><span class="side_text">Accueil</span></a>
+            <a href="#"><i class="fas fa-user"></i><span class="side_text">Mon compte</span></a>
+            <a href="#"><i class="fas fa-sign-out-alt"></i><span class="side_text">Se déconnecter</span></a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i><span class="side_text">Ou suis-je ?</span></a>
+            <a href="./creation_projet.html"><i class="fas fa-file-alt"></i><span class="side_text">Nouveau projet</span></a>
+            <a href="./creation_client.html"><i class="fas fa-user-plus"></i><span class="side_text">Nouveau client</span></a>
+            <a href="./liste_des_clients.html"><i class="fas fa-clipboard-list"></i><span class="side_text">Liste des clients</span></a>
+        </div>
+        <span class="user">
+            <span class="icon_color"><i class="fas fa-user-check" title="Statut connecté(e)"></i>
+            </span>
+            <span class="user_co">Bienvenue ! Vous êtes connecté(e) en tant que "<span class="diff_color">Administrateur</span>"
+            </span>
+        </span>
         <div class="titredeux">
         <h2 class="formulaire"> Ajout d'un nouveau client </h2> <br><br>          
         </div>

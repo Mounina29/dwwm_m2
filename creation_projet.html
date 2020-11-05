@@ -6,6 +6,8 @@ Crée par: Benoit -->
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="./css/main.css" />
+        <script src="./js/main.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
         <title>ABI: Création d'un projet</title>
     </head>
     <body>
@@ -20,37 +22,56 @@ Crée par: Benoit -->
                 </ul>
             </nav>
         </header>
-        <main>
-            <aside><!-- Ajout des boutons-->
-                <button type="submit">MON COMPTE</button>
-                <br>
-                <button type="submit">DECONNEXION</button>
-            </aside>
+        <br>
+        <!-- Petite checkbox utilisé pour dérouler le menu sidebar -->
+        <input type="checkbox" id="check" checked="">
+        <label for="check">
+            <span class="menu">MENU</span><i class="fas fa-bars" id="mon_sidebar_btn"></i>
+        </label>
+        <!-- Ma SIDEBAR + message de bienvenue nom de la personne connectée -->
+        <div class="sidebar">
+            <a href="#"><i class="fas fa-home"></i><span class="side_text">Accueil</span></a>
+            <a href="#"><i class="fas fa-user"></i><span class="side_text">Mon compte</span></a>
+            <a href="#"><i class="fas fa-sign-out-alt"></i><span class="side_text">Se déconnecter</span></a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i><span class="side_text">Ou suis-je ?</span></a>
+            <a href="./creation_projet.html"><i class="fas fa-file-alt"></i><span class="side_text">Nouveau projet</span></a>
+            <a href="./creation_client.html"><i class="fas fa-user-plus"></i><span class="side_text">Nouveau client</span></a>
+            <a href="./liste_des_clients.html"><i class="fas fa-clipboard-list"></i><span class="side_text">Liste des clients</span></a>
+        </div>
+        <span class="user">
+            <span class="icon_color"><i class="fas fa-user-check" title="Statut connecté(e)"></i>
+            </span>
+            <span class="user_co">Bienvenue ! Vous êtes connecté(e) en tant que "<span class="diff_color">Administrateur</span>"
+            </span>
+        </span>
             <h2 class="initProjet">CREATION D'UN NOUVEAU PROJET</h2>
-            <form id="initialisationProjet">
+            <form id="initProjet" onSubmit="return validation()">
                 <div><!-- Code du projet -->
-                    <label class="code">CODE PROJET:</label>
-                    <input type="text" name="code" id="code" minlength="2" required>
+                    <label>CODE PROJET:</label>
+                    <input type="text" name="code" id="code">
+                    <span id="missCode"></span>
                 </div>
                 <br>
                 <div><!-- Nom du projet -->
-                    <label class="nom">NOM PROJET:</label>
-                    <input type="text" name="nom" id="nom" minlength="2" required>
+                    <label>NOM PROJET:</label>
+                    <input type="text" name="nom" id="nom">
+                    <span id="missNom"></span>
                 </div>
                 <br>
                 <div><!-- Type du projet -->
-                    <label class="typeProjet">TYPE PROJET:</label>
-                    <select name="projet" id="projet" required>
+                    <label>TYPE PROJET:</label>
+                    <select name="typeProjet" id="typeProjet">
                         <option value="">-----</option>
                         <option value="forfait">FORFAIT</option>
                         <option value="assistance">ASSISTANCE</option>
                         <option value="regie">REGIE</option>
                     </select>
+                    <span id="missTypeProjet"></span>
                 </div>
                 <br>
                 <div><!-- Secteur d'activité du projet -->
-                    <label class="secteurActivite">SECTEUR D'ACTIVITE:</label>
-                    <select name="secteurActivite" id="secteurActivite" required>
+                    <label>SECTEUR D'ACTIVITE:</label>
+                    <select name="secteurActivite" id="secteurActivite">
                         <option value="">-----</option>
                         <option value="agroalimentaire">Agroalimentaire</option>
                         <option value="banque">Banque / Assurance</option>
@@ -62,50 +83,53 @@ Crée par: Benoit -->
                         <option value="textile">Textile / Habillement / Chaussure</option>
                         <option value="transports">Transports / Logistique</option>
                     </select>
+                    <span id="missSecteurActivite"></span>
                 </div>
                 <br>
                 <div><!-- Charge globale du projet -->
-                    <label class="chargeGlobale">CHARGES GLOBALES ESTIMEES:</label>
-                    <input type="number" id="chargeGlobale" required>
+                    <label>CHARGES GLOBALES ESTIMEES:</label>
+                    <input type="number" id="chargeGlobale" min="1">
+                    <span id="missChargeGlobale"></span>
                 </div>
                 <br>
                 <div><!-- Commercial -->
-                    <label class="commercial">COMMERCIAL:</label>
-                    <select name="commercial" id="commercial" required>
+                    <label>COMMERCIAL:</label>
+                    <select name="commercial" id="commercial">
                         <option value="">-----</option>
                         <option value="Mathieu">MATHIEU</option>
                         <option value="jack">JACK</option>
                         <option value="nabile">NABILE</option>
                     </select>
+                    <span id="missCommercial"></span>
                 </div>
                 <br>
                 <div><!-- Product Owner -->
-                    <label class="po">PRODUCT OWNER:</label>
-                    <select name="po" id="po" required>
+                    <label>PRODUCT OWNER:</label>
+                    <select name="po" id="po">
                         <option value="">-----</option>
                         <option value="marie">MARIE</option>
                         <option value="franck">FRANCK</option>
                         <option value="nicky">NICKY</option>
                     </select>
+                    <span id="missPo"></span>
                 </div>
                 <br>
                 <div><!-- Scrum Master -->
                     <label class="scrumMaster">SCRUM MASTER:</label>
-                    <select name="scrumMaster" id="scrumMaster" required>
+                    <select name="scrumMaster" id="scrumMaster">
                         <option value="">-----</option>
                         <option value="nada">NADA</option>
                         <option value="benoit">BENOIT</option>
                         <option value="mounina">MOUNINA</option>
                     </select>
+                    <span id="missScrumMaster"></span>
                 </div>
                 <br>
-                <button type="reset">ANNULER</button> <button type="submit">VALIDER</button>
+                <button type="reset">ANNULER</button> <button>VALIDER</button>
             </form>
-        </main>
         <footer><!-- Pied de page -->
             <p class="footer">&copy; ABI 2020. TOUS DROITS RESERVES</p>
             <a href="mailto:contact@abi.fr">contact@abi.fr</a>
         </footer>
-        <!-- <script src="./js/main.js"></script> -->
     </body>
 </html>
